@@ -1,0 +1,93 @@
+
+html, body {
+  background-color: transparent !important;
+  font-family: "Aileron", Futura, "Gill Sans", sans-serif !important;
+}
+
+body {
+  color: #525151;
+  font-size: 12px;
+}
+
+/* Wrapper */
+.muster-wrapper {
+  background: #ffffff; /* white background */
+  border-radius: 12px; /* rounded corners */
+  padding: 16px; /* optional: gives breathing room inside */
+}
+
+/* Submit button */
+.muster-wrapper input[type='submit'] {
+  font-size: 12px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: #FCB900;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.muster-wrapper input[type='submit']:hover {
+  background: #e0a700; /* slightly darker yellow */
+  transform: translateY(-1px);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(252, 185, 0, 0.6); /* subtle glow */
+}
+
+.muster-wrapper .muster-act-btn-secondary {
+  display: none;
+}
+
+.muster-wrapper .muster-opt-in {
+  margin: 0 auto !important;
+}
+
+.muster-wrapper .muster-opt-in label {
+  width: 300px !important;
+}
+
+/* Input styling */
+.muster-input-wrapper,
+.muster-input-wrapper label,
+.muster-input-wrapper input,
+.muster-input-wrapper select,
+.muster-input-wrapper textarea,
+.muster-input-wrapper option {
+  font-size: 12px;
+  color: #525151;
+  font-family: inherit !important;
+}
+
+.muster-input-wrapper input,
+.muster-input-wrapper select,
+.muster-input-wrapper textarea,
+.muster-input-wrapper option {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 0 !important;
+}
+
+.muster-input-wrapper select,
+.muster-input-wrapper option {
+  color: #525151 !important;
+}
+
+.muster-input-wrapper textarea {
+  resize: none !important;
+  overflow-x: hidden !important;
+}
+
+.muster-input-wrapper textarea:disabled {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.muster-input-wrapper label span {
+  font-size: 12px;
+}
+
+.muster-input-wrapper input[type='checkbox'] {
+  text-align: center;
+}
+
+/* Hide label span in personal message */
+.muster-personal-message div label span {
+  display: none;
+}
