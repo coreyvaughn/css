@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Muster Action Center – Modern Card Theme
+   Version: 1.0.0
+   Purpose: Drop-in styling for Muster Action Center embeds
+   ========================================================================== */
+
+/* -----------------------------
+   CSS Reset (Scoped)
+   ----------------------------- */
+
+.muster-embed-action,
+.muster-embed-action * {
+  box-sizing: border-box;
+}
+
+/* -----------------------------
+   Design Tokens
+   ----------------------------- */
+
+.muster-embed-action {
+  --brand-primary: #2563eb;
+  --brand-primary-hover: #1d4ed8;
+
+  --surface-bg: #ffffff;
+  --surface-muted: #f1f5f9;
+  --surface-border: #e6eaf0;
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+
+  --radius-lg: 14px;
+  --radius-md: 10px;
+
+  --shadow-soft:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 12px 28px rgba(0, 0, 0, 0.10);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+}
+
+/* -----------------------------
+   Embed Card Container
+   ----------------------------- */
+
+.muster-embed-action {
+  background: var(--surface-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--surface-border);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* -----------------------------
+   Sticky Header / Toolbar
+   ----------------------------- */
+
+.muster-embed-action header,
+.muster-embed-action [class*="header"],
+.muster-embed-action [class*="toolbar"] {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface-bg);
+  border-bottom: 1px solid var(--surface-border);
+  padding: 12px 16px;
+}
+
+/* -----------------------------
+   Typography
+   ----------------------------- */
+
+.muster-embed-action h1,
+.muster-embed-action h2,
+.muster-embed-action h3 {
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.muster-embed-action p,
+.muster-embed-action span,
+.muster-embed-action li {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* -----------------------------
+   Inner Cards / Rows
+   ----------------------------- */
+
+.muster-embed-action [class*="card"],
+.muster-embed-action [class*="item"],
+.muster-embed-action li {
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--surface-border);
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.muster-embed-action
+[class*="card"]:hover,
+.muster-embed-action
+[class*="item"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* -----------------------------
+   Buttons
+   ----------------------------- */
+
+.muster-embed-action button,
+.muster-embed-action [role="button"] {
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: var(--surface-muted);
+  color: var(--text-primary);
+}
+
+.muster-embed-action button[class*="primary"],
+.muster-embed-action .primary {
+  background: var(--brand-primary);
+  color: #ffffff;
+}
+
+.muster-embed-action button:hover {
+  filter: brightness(0.96);
+}
+
+/* -----------------------------
+   Iframe Normalization
+   ----------------------------- */
+
+.muster-embed-action iframe {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-md);
+}
+
+/* -----------------------------
+   Hover Elevation (Whole Card)
+   ----------------------------- */
+
+.muster-embed-action:hover {
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.06),
+    0 16px 32px rgba(0, 0, 0, 0.10);
+}
+
+/* -----------------------------
+   Dark Mode (OS-based)
+   ----------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  .muster-embed-action {
+    background: #0f172a;
+    border-color: #1e293b;
+  }
+
+  .muster-embed-action * {
+    color: #e5e7eb;
+  }
+
+  .muster-embed-action
+  [class*="card"],
+  .muster-embed-action
+  [class*="item"] {
+    background: #020617;
+    border-color: #1e293b;
+  }
+
+  .muster-embed-action button {
+    background: #1e40af;
+    color: #ffffff;
+  }
+}
