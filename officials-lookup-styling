@@ -1,0 +1,285 @@
+/* Modern Card Styling for Muster Officials Lookup Widget */
+
+/* Main widget container */
+#muster-lookup {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Search and filter section */
+#muster-lookup .search-container,
+#muster-lookup .filter-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+#muster-lookup .search-container:hover,
+#muster-lookup .filter-container:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Input fields */
+#muster-lookup input[type="text"],
+#muster-lookup input[type="search"],
+#muster-lookup select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+#muster-lookup input[type="text"]:focus,
+#muster-lookup input[type="search"]:focus,
+#muster-lookup select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Buttons */
+#muster-lookup button,
+#muster-lookup .button {
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#muster-lookup button:hover,
+#muster-lookup .button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+#muster-lookup button:active,
+#muster-lookup .button:active {
+  transform: translateY(0);
+}
+
+/* Officials grid/list container */
+#muster-lookup .officials-container,
+#muster-lookup .results-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Individual official cards */
+#muster-lookup .official-card,
+#muster-lookup .official {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#muster-lookup .official-card:hover,
+#muster-lookup .official:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Official photo/avatar */
+#muster-lookup .official-photo,
+#muster-lookup .official-image,
+#muster-lookup img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #f3f4f6;
+}
+
+/* Official name */
+#muster-lookup .official-name,
+#muster-lookup .name,
+#muster-lookup h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+/* Official title/position */
+#muster-lookup .official-title,
+#muster-lookup .title,
+#muster-lookup .position {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Party affiliation */
+#muster-lookup .party {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+#muster-lookup .party.democrat,
+#muster-lookup .party.Democratic {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+#muster-lookup .party.republican,
+#muster-lookup .party.Republican {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+#muster-lookup .party.independent,
+#muster-lookup .party.Independent {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Contact information */
+#muster-lookup .contact-info,
+#muster-lookup .official-contact {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#muster-lookup .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+#muster-lookup .contact-item a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#muster-lookup .contact-item a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Social media links */
+#muster-lookup .social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+#muster-lookup .social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+#muster-lookup .social-link:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Loading state */
+#muster-lookup .loading,
+#muster-lookup .spinner {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+/* Empty state */
+#muster-lookup .no-results,
+#muster-lookup .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#muster-lookup .no-results h3,
+#muster-lookup .empty-state h3 {
+  color: #6b7280;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Badges and tags */
+#muster-lookup .badge,
+#muster-lookup .tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #f3f4f6;
+  color: #374151;
+  margin-right: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #muster-lookup {
+    padding: 16px;
+  }
+  
+  #muster-lookup .officials-container,
+  #muster-lookup .results-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  #muster-lookup .official-card,
+  #muster-lookup .official {
+    padding: 20px;
+  }
+  
+  #muster-lookup .search-container,
+  #muster-lookup .filter-container {
+    padding: 20px;
+  }
+}
+
+/* Accessibility improvements */
+#muster-lookup *:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for anchor links */
+#muster-lookup {
+  scroll-behavior: smooth;
+}
