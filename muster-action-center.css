@@ -17,6 +17,8 @@ body {
   padding: 24px !important;
   color: #111827 !important;
   border-radius: 12px !important;
+  border: 2px solid #e5e7eb !important;
+  text-align: left !important;
 }
 
 /* Action card container */
@@ -30,6 +32,7 @@ body {
   margin-bottom: 20px !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
   transition: all 0.3s ease !important;
+  text-align: left !important;
 }
 
 .muster-action-card:hover,
@@ -79,6 +82,9 @@ body {
 .muster-input-wrapper {
   margin-bottom: 20px !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  text-align: left !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 .muster-input-wrapper label {
@@ -88,6 +94,7 @@ body {
   color: #374151 !important;
   margin-bottom: 6px !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  text-align: left !important;
 }
 
 .muster-input-wrapper label span {
@@ -153,9 +160,13 @@ body {
 /* Checkbox styling */
 .muster-input-wrapper input[type='checkbox'] {
   width: auto !important;
+  height: 18px !important;
   margin-right: 8px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   cursor: pointer !important;
   vertical-align: middle !important;
+  flex-shrink: 0 !important;
 }
 
 /* Buttons - modern blue style */
@@ -220,6 +231,7 @@ body {
   border-radius: 8px !important;
   padding: 20px !important;
   margin: 20px 0 !important;
+  text-align: left !important;
 }
 
 .muster-personal-message div label span {
@@ -228,15 +240,16 @@ body {
   font-weight: 500 !important;
   color: #374151 !important;
   margin-bottom: 8px !important;
+  text-align: left !important;
 }
 
 /* Opt-in container */
 .muster-opt-in {
-  margin: 20px auto !important;
+  margin: 20px 0 !important;
   padding: 16px !important;
   background: #f9fafb !important;
   border-radius: 8px !important;
-  max-width: 600px !important;
+  text-align: left !important;
 }
 
 .muster-opt-in label {
@@ -246,6 +259,8 @@ body {
   color: #4b5563 !important;
   line-height: 1.5 !important;
   width: 100% !important;
+  text-align: left !important;
+  margin: 0 !important;
 }
 
 .muster-opt-in input[type='checkbox'] {
