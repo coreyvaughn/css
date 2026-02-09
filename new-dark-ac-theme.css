@@ -1,0 +1,176 @@
+/* ===========================
+   Root wrapper (entire widget)
+   =========================== */
+.muster-wrapper {
+  background: #0f1115;
+  color: #e5e7eb;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px;
+
+  border-radius: 16px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ===========================
+   Headings & copy
+   =========================== */
+.muster-wrapper h1,
+.muster-wrapper h2,
+.muster-wrapper h3 {
+  color: #f9fafb;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.muster-wrapper p,
+.muster-wrapper label {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Input wrappers
+   =========================== */
+.muster-input-wrapper {
+  margin-bottom: 16px;
+}
+
+/* Labels */
+.muster-input-wrapper label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+/* ===========================
+   Inputs & selects
+   =========================== */
+.muster-input-wrapper input,
+.muster-input-wrapper select,
+.muster-input-wrapper textarea {
+  width: 100%;
+  background: #161a22;
+  color: #f3f4f6;
+
+  padding: 12px 14px;
+  font-size: 15px;
+
+  border-radius: 10px;
+  border: 1px solid #252a36;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.muster-input-wrapper input::placeholder,
+.muster-input-wrapper textarea::placeholder {
+  color: #6b7280;
+}
+
+/* Focus states */
+.muster-input-wrapper input:focus,
+.muster-input-wrapper select:focus,
+.muster-input-wrapper textarea:focus {
+  outline: none;
+  background: #1b2030;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+/* ===========================
+   Buttons / CTAs
+   =========================== */
+.muster-wrapper button,
+.muster-wrapper .muster-button,
+.muster-wrapper input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 20px;
+  margin-top: 8px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease,
+    opacity 0.15s ease;
+}
+
+.muster-wrapper button:hover,
+.muster-wrapper .muster-button:hover,
+.muster-wrapper input[type="submit"]:hover {
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.45);
+  transform: translateY(-1px);
+}
+
+.muster-wrapper button:active,
+.muster-wrapper .muster-button:active,
+.muster-wrapper input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.35);
+}
+
+/* ===========================
+   Secondary actions / links
+   =========================== */
+.muster-wrapper a {
+  color: #818cf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.muster-wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Helper text & errors
+   =========================== */
+.muster-wrapper .helper-text {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+.muster-wrapper .error,
+.muster-wrapper .error-text {
+  color: #f87171;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ===========================
+   Mobile adjustments
+   =========================== */
+@media (max-width: 640px) {
+  .muster-wrapper {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .muster-wrapper button,
+  .muster-wrapper input[type="submit"] {
+    width: 100%;
+  }
+}
