@@ -1,0 +1,510 @@
+/* Modern Card Styling for Muster Action Center Widget */
+
+/* Reset background for dark theme */
+html {
+  background-color: #1f2937 !important;
+  background: #1f2937 !important;
+}
+
+body {
+  background-color: #1f2937 !important;
+  background: #1f2937 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  color: #f9fafb !important;
+}
+
+/* Universal dark theme enforcement */
+div, section, article, main, header, footer, form {
+  color: #f9fafb !important;
+}
+
+p, span, label, h1, h2, h3, h4, h5, h6 {
+  color: inherit !important;
+}
+
+/* Main wrapper - dark theme */
+.muster-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  background: #1f2937 !important;
+  padding: 20px !important;
+  color: #f9fafb !important;
+  border-radius: 0 !important;
+  border: none !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+}
+
+/* Action card container */
+.muster-action-card,
+.muster-card,
+[class*="action-card"],
+[class*="ActionCard"] {
+  background: #374151 !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+  text-align: left !important;
+}
+
+.muster-action-card:hover,
+.muster-card:hover,
+[class*="action-card"]:hover,
+[class*="ActionCard"]:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-4px) !important;
+  background: #4b5563 !important;
+}
+
+/* Action list/grid */
+.muster-actions-list,
+.muster-actions-grid,
+[class*="actions-list"],
+[class*="ActionsGrid"] {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+  margin: 24px 0 !important;
+}
+
+/* Action title */
+.muster-action-title,
+[class*="action-title"],
+[class*="ActionTitle"],
+.muster-wrapper h2,
+.muster-wrapper h3 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #f9fafb !important;
+  margin: 0 0 12px 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* Action description */
+.muster-action-description,
+.muster-description,
+[class*="action-description"],
+[class*="ActionDescription"] {
+  font-size: 15px !important;
+  color: #d1d5db !important;
+  line-height: 1.6 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Input wrapper styling - REDUCED SPACING */
+.muster-input-wrapper {
+  margin-bottom: 12px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  text-align: left !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* REDUCED LABEL SPACING */
+.muster-input-wrapper label {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #e5e7eb !important;
+  margin-bottom: 4px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  text-align: left !important;
+}
+
+.muster-input-wrapper label span {
+  font-size: 14px !important;
+  color: #e5e7eb !important;
+}
+
+.muster-input-wrapper input,
+.muster-input-wrapper select,
+.muster-input-wrapper textarea {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  color: #f9fafb !important;
+  background-color: #4b5563 !important;
+  border: 2px solid #6b7280 !important;
+  border-radius: 8px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+/* REMOVED BLUE FOCUS BOX */
+.muster-input-wrapper input:focus,
+.muster-input-wrapper select:focus,
+.muster-input-wrapper textarea:focus {
+  outline: none !important;
+  border-color: #9ca3af !important;
+  box-shadow: none !important;
+  background-color: #374151 !important;
+}
+
+.muster-input-wrapper input::placeholder,
+.muster-input-wrapper textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+.muster-input-wrapper textarea {
+  resize: vertical !important;
+  min-height: 120px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.muster-input-wrapper textarea:disabled {
+  background-color: #374151 !important;
+  color: #9ca3af !important;
+  cursor: not-allowed !important;
+}
+
+.muster-input-wrapper select,
+.muster-input-wrapper option {
+  font-size: 16px !important;
+  color: #f9fafb !important;
+  cursor: pointer !important;
+}
+
+.muster-input-wrapper select {
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23d1d5db' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding-right: 40px !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* Specific fix for prefix field (often a select dropdown) */
+.muster-input-wrapper select[name*="prefix"],
+.muster-input-wrapper select[id*="prefix"],
+.muster-input-wrapper .prefix-field,
+.muster-input-wrapper .muster-prefix,
+select[name*="prefix"],
+select[id*="prefix"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  text-align: left !important;
+}
+
+/* Additional fix for any wrapper around prefix */
+.muster-input-wrapper div:has(select[name*="prefix"]),
+.muster-input-wrapper div:has(select[id*="prefix"]) {
+  width: 100% !important;
+  display: block !important;
+  text-align: left !important;
+}
+
+/* Fix for any inline styling issues on prefix */
+.muster-input-wrapper select {
+  min-width: 0 !important;
+}
+
+/* Checkbox styling */
+.muster-input-wrapper input[type='checkbox'] {
+  width: auto !important;
+  height: 18px !important;
+  margin-right: 8px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  cursor: pointer !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+}
+
+/* YELLOW BUTTONS */
+.muster-wrapper input[type='submit'],
+.muster-wrapper button,
+.muster-button,
+.muster-btn {
+  background: #fbbf24 !important;
+  color: #111827 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.muster-wrapper input[type='submit']:hover,
+.muster-wrapper button:hover,
+.muster-button:hover,
+.muster-btn:hover {
+  background: #f59e0b !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4) !important;
+}
+
+.muster-wrapper input[type='submit']:active,
+.muster-wrapper button:active,
+.muster-button:active,
+.muster-btn:active {
+  transform: translateY(0) !important;
+}
+
+.muster-wrapper input[type='submit']:disabled,
+.muster-wrapper button:disabled {
+  background: #9ca3af !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  color: #4b5563 !important;
+}
+
+/* Secondary buttons */
+.muster-act-btn-secondary,
+.muster-btn-secondary {
+  background: #ffffff !important;
+  color: #3b82f6 !important;
+  border: 2px solid #3b82f6 !important;
+}
+
+.muster-act-btn-secondary:hover,
+.muster-btn-secondary:hover {
+  background: #eff6ff !important;
+  border-color: #2563eb !important;
+}
+
+/* Personal message section */
+.muster-personal-message {
+  background: #374151 !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+  margin: 20px 0 !important;
+  text-align: left !important;
+  border: 1px solid #4b5563 !important;
+}
+
+.muster-personal-message div label span {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #e5e7eb !important;
+  margin-bottom: 8px !important;
+  text-align: left !important;
+}
+
+/* Opt-in container */
+.muster-opt-in {
+  margin: 20px 0 !important;
+  padding: 16px !important;
+  background: #374151 !important;
+  border-radius: 8px !important;
+  text-align: left !important;
+  border: 1px solid #4b5563 !important;
+}
+
+.muster-opt-in label {
+  display: flex !important;
+  align-items: flex-start !important;
+  font-size: 14px !important;
+  color: #d1d5db !important;
+  line-height: 1.5 !important;
+  width: 100% !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+
+.muster-opt-in input[type='checkbox'] {
+  margin-top: 3px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Progress indicator */
+.muster-progress,
+[class*="progress"],
+[class*="Progress"] {
+  background: #e5e7eb !important;
+  border-radius: 8px !important;
+  height: 8px !important;
+  overflow: hidden !important;
+  margin: 16px 0 !important;
+}
+
+.muster-progress-bar,
+[class*="progress-bar"] {
+  background: #3b82f6 !important;
+  height: 100% !important;
+  transition: width 0.3s ease !important;
+}
+
+/* Success/completion message */
+.muster-success,
+.muster-complete,
+[class*="success"],
+[class*="complete"] {
+  background: #d1fae5 !important;
+  color: #065f46 !important;
+  padding: 16px 20px !important;
+  border-radius: 8px !important;
+  margin: 20px 0 !important;
+  border-left: 4px solid #10b981 !important;
+}
+
+/* Error message */
+.muster-error,
+[class*="error"] {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  padding: 16px 20px !important;
+  border-radius: 8px !important;
+  margin: 20px 0 !important;
+  border-left: 4px solid #ef4444 !important;
+}
+
+/* Info/alert message */
+.muster-info,
+.muster-alert,
+[class*="info"],
+[class*="alert"] {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+  padding: 16px 20px !important;
+  border-radius: 8px !important;
+  margin: 20px 0 !important;
+  border-left: 4px solid #3b82f6 !important;
+}
+
+/* Badge/tag styling */
+.muster-badge,
+.muster-tag,
+[class*="badge"],
+[class*="tag"] {
+  display: inline-block !important;
+  padding: 4px 12px !important;
+  border-radius: 16px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background: #e5e7eb !important;
+  color: #374151 !important;
+  margin: 4px 4px 4px 0 !important;
+}
+
+/* Recipient/target section */
+.muster-recipient,
+.muster-target,
+[class*="recipient"],
+[class*="target"] {
+  background: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  border-radius: 8px !important;
+  padding: 16px !important;
+  margin: 16px 0 !important;
+}
+
+.muster-recipient h4,
+.muster-target h4 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #1e40af !important;
+  margin: 0 0 8px 0 !important;
+}
+
+/* Loading state */
+.muster-loading,
+[class*="loading"],
+[class*="Loading"] {
+  text-align: center !important;
+  padding: 40px !important;
+  color: #6b7280 !important;
+}
+
+/* Empty state */
+.muster-empty,
+.muster-no-actions,
+[class*="empty"],
+[class*="no-actions"] {
+  text-align: center !important;
+  padding: 60px 20px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  color: #6b7280 !important;
+}
+
+/* Links */
+.muster-wrapper a {
+  color: #60a5fa !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.muster-wrapper a:hover {
+  color: #93c5fd !important;
+  text-decoration: underline !important;
+}
+
+/* Divider */
+.muster-divider,
+hr {
+  border: none !important;
+  border-top: 1px solid #4b5563 !important;
+  margin: 24px 0 !important;
+}
+
+/* Footer */
+.muster-footer,
+[class*="footer"] {
+  margin-top: 32px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid #4b5563 !important;
+  text-align: center !important;
+  font-size: 13px !important;
+  color: #9ca3af !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .muster-wrapper {
+    padding: 16px !important;
+  }
+  
+  .muster-action-card,
+  .muster-card,
+  [class*="action-card"],
+  [class*="ActionCard"] {
+    padding: 20px !important;
+  }
+  
+  .muster-actions-list,
+  .muster-actions-grid,
+  [class*="actions-list"],
+  [class*="ActionsGrid"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  
+  .muster-input-wrapper input,
+  .muster-input-wrapper select,
+  .muster-input-wrapper textarea {
+    font-size: 16px !important;
+  }
+  
+  .muster-wrapper input[type='submit'],
+  .muster-wrapper button,
+  .muster-button,
+  .muster-btn {
+    padding: 14px 20px !important;
+  }
+}
+
+/* Accessibility */
+.muster-wrapper *:focus-visible {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Smooth transitions */
+.muster-wrapper * {
+  transition-timing-function: ease-in-out !important;
+}
