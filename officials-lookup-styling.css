@@ -1,285 +1,351 @@
 /* Modern Card Styling for Muster Officials Lookup Widget */
 
-/* Main widget container */
-#muster-lookup {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+/* Reset background for iframe transparency */
+html {
+  background-color: transparent !important;
 }
 
-/* Search and filter section */
-#muster-lookup .search-container,
-#muster-lookup .filter-container {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
+body {
+  background-color: transparent !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
-#muster-lookup .search-container:hover,
-#muster-lookup .filter-container:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+/* Main wrapper - modern clean background */
+.muster-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  background: #f9fafb !important;
+  padding: 24px !important;
+  color: #111827 !important;
 }
 
-/* Input fields */
-#muster-lookup input[type="text"],
-#muster-lookup input[type="search"],
-#muster-lookup select {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.2s ease;
-  background: #ffffff;
+/* Input wrapper styling - modern form inputs */
+.muster-input-wrapper {
+  margin-bottom: 20px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
-#muster-lookup input[type="text"]:focus,
-#muster-lookup input[type="search"]:focus,
-#muster-lookup select:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+.muster-input-wrapper label {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  margin-bottom: 6px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
-/* Buttons */
-#muster-lookup button,
-#muster-lookup .button {
-  background: #3b82f6;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.muster-input-wrapper input,
+.muster-input-wrapper select,
+.muster-input-wrapper textarea {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  color: #111827 !important;
+  background-color: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  transition: all 0.2s ease !important;
+  box-sizing: border-box !important;
 }
 
-#muster-lookup button:hover,
-#muster-lookup .button:hover {
-  background: #2563eb;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+.muster-input-wrapper input:focus,
+.muster-input-wrapper select:focus,
+.muster-input-wrapper textarea:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
 }
 
-#muster-lookup button:active,
-#muster-lookup .button:active {
-  transform: translateY(0);
+.muster-input-wrapper textarea {
+  resize: vertical !important;
+  min-height: 100px !important;
 }
 
-/* Officials grid/list container */
-#muster-lookup .officials-container,
-#muster-lookup .results-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-  margin-top: 24px;
+.muster-input-wrapper select {
+  cursor: pointer !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding-right: 40px !important;
 }
 
-/* Individual official cards */
-#muster-lookup .official-card,
-#muster-lookup .official {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+/* Buttons - modern blue style */
+.muster-wrapper input[type='submit'],
+.muster-wrapper button,
+.muster-button {
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
 }
 
-#muster-lookup .official-card:hover,
-#muster-lookup .official:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  transform: translateY(-4px);
+.muster-wrapper input[type='submit']:hover,
+.muster-wrapper button:hover,
+.muster-button:hover {
+  background: #2563eb !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
 }
 
-/* Official photo/avatar */
-#muster-lookup .official-photo,
-#muster-lookup .official-image,
-#muster-lookup img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-  border: 3px solid #f3f4f6;
+.muster-wrapper input[type='submit']:active,
+.muster-wrapper button:active,
+.muster-button:active {
+  transform: translateY(0) !important;
+}
+
+/* Secondary buttons */
+.muster-act-btn-secondary {
+  background: #ffffff !important;
+  color: #3b82f6 !important;
+  border: 2px solid #3b82f6 !important;
+}
+
+.muster-act-btn-secondary:hover {
+  background: #eff6ff !important;
+}
+
+/* Card styling for official results */
+.muster-official-card,
+.muster-card,
+[class*="official-card"],
+[class*="OfficialCard"] {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.muster-official-card:hover,
+.muster-card:hover,
+[class*="official-card"]:hover,
+[class*="OfficialCard"]:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Grid layout for multiple cards */
+.muster-officials-grid,
+.muster-results-container,
+[class*="officials-grid"],
+[class*="ResultsContainer"] {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 24px !important;
+  margin-top: 24px !important;
+}
+
+/* Official photo styling */
+.muster-official-photo,
+.muster-photo,
+[class*="official-photo"],
+[class*="OfficialPhoto"],
+.muster-wrapper img {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  margin-bottom: 16px !important;
+  border: 3px solid #f3f4f6 !important;
 }
 
 /* Official name */
-#muster-lookup .official-name,
-#muster-lookup .name,
-#muster-lookup h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #111827;
-  margin: 0 0 8px 0;
+.muster-official-name,
+.muster-name,
+[class*="official-name"],
+[class*="OfficialName"],
+.muster-wrapper h3 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
+  margin: 0 0 8px 0 !important;
 }
 
 /* Official title/position */
-#muster-lookup .official-title,
-#muster-lookup .title,
-#muster-lookup .position {
-  font-size: 14px;
-  font-weight: 500;
-  color: #6b7280;
-  margin: 0 0 4px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+.muster-official-title,
+.muster-title,
+[class*="official-title"],
+[class*="OfficialTitle"] {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin: 0 0 4px 0 !important;
 }
 
-/* Party affiliation */
-#muster-lookup .party {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 16px;
-  font-size: 12px;
-  font-weight: 600;
-  margin: 8px 0;
+/* Party affiliation badges */
+.muster-party,
+[class*="party"],
+[class*="Party"] {
+  display: inline-block !important;
+  padding: 4px 12px !important;
+  border-radius: 16px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin: 8px 0 !important;
 }
 
-#muster-lookup .party.democrat,
-#muster-lookup .party.Democratic {
-  background: #dbeafe;
-  color: #1e40af;
+.muster-party.democrat,
+.muster-party.Democratic,
+[class*="democrat"],
+[class*="Democratic"] {
+  background: #dbeafe !important;
+  color: #1e40af !important;
 }
 
-#muster-lookup .party.republican,
-#muster-lookup .party.Republican {
-  background: #fee2e2;
-  color: #991b1b;
+.muster-party.republican,
+.muster-party.Republican,
+[class*="republican"],
+[class*="Republican"] {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
 }
 
-#muster-lookup .party.independent,
-#muster-lookup .party.Independent {
-  background: #f3f4f6;
-  color: #374151;
+.muster-party.independent,
+.muster-party.Independent,
+[class*="independent"],
+[class*="Independent"] {
+  background: #f3f4f6 !important;
+  color: #374151 !important;
 }
 
 /* Contact information */
-#muster-lookup .contact-info,
-#muster-lookup .official-contact {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid #e5e7eb;
+.muster-contact-info,
+[class*="contact-info"],
+[class*="ContactInfo"] {
+  margin-top: 16px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #e5e7eb !important;
 }
 
-#muster-lookup .contact-item {
-  display: flex;
-  align-items: center;
-  margin: 8px 0;
-  font-size: 14px;
-  color: #4b5563;
+.muster-contact-item,
+[class*="contact-item"] {
+  display: flex !important;
+  align-items: center !important;
+  margin: 8px 0 !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
 }
 
-#muster-lookup .contact-item a {
-  color: #3b82f6;
-  text-decoration: none;
-  transition: color 0.2s ease;
+.muster-wrapper a {
+  color: #3b82f6 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
 }
 
-#muster-lookup .contact-item a:hover {
-  color: #2563eb;
-  text-decoration: underline;
+.muster-wrapper a:hover {
+  color: #2563eb !important;
+  text-decoration: underline !important;
 }
 
-/* Social media links */
-#muster-lookup .social-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
+/* Search container */
+.muster-search-container,
+[class*="search-container"],
+[class*="SearchContainer"] {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
-#muster-lookup .social-link {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #f3f4f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  text-decoration: none;
+/* Filter container */
+.muster-filter-container,
+[class*="filter-container"],
+[class*="FilterContainer"] {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
-#muster-lookup .social-link:hover {
-  background: #3b82f6;
-  color: #ffffff;
-  transform: scale(1.1);
+/* Checkbox styling */
+.muster-input-wrapper input[type='checkbox'] {
+  width: auto !important;
+  margin-right: 8px !important;
+  cursor: pointer !important;
 }
 
-/* Loading state */
-#muster-lookup .loading,
-#muster-lookup .spinner {
-  text-align: center;
-  padding: 40px;
-  color: #6b7280;
+/* Opt-in container */
+.muster-opt-in {
+  margin: 16px 0 !important;
+  padding: 16px !important;
+  background: #f9fafb !important;
+  border-radius: 8px !important;
+}
+
+.muster-opt-in label {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  color: #4b5563 !important;
+}
+
+/* Loading states */
+.muster-loading,
+[class*="loading"],
+[class*="Loading"] {
+  text-align: center !important;
+  padding: 40px !important;
+  color: #6b7280 !important;
 }
 
 /* Empty state */
-#muster-lookup .no-results,
-#muster-lookup .empty-state {
-  text-align: center;
-  padding: 60px 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-#muster-lookup .no-results h3,
-#muster-lookup .empty-state h3 {
-  color: #6b7280;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-/* Badges and tags */
-#muster-lookup .badge,
-#muster-lookup .tag {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
-  background: #f3f4f6;
-  color: #374151;
-  margin-right: 6px;
+.muster-no-results,
+.muster-empty-state,
+[class*="no-results"],
+[class*="empty-state"] {
+  text-align: center !important;
+  padding: 60px 20px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  color: #6b7280 !important;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  #muster-lookup {
-    padding: 16px;
+  .muster-wrapper {
+    padding: 16px !important;
   }
   
-  #muster-lookup .officials-container,
-  #muster-lookup .results-container {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .muster-officials-grid,
+  .muster-results-container,
+  [class*="officials-grid"],
+  [class*="ResultsContainer"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
   
-  #muster-lookup .official-card,
-  #muster-lookup .official {
-    padding: 20px;
+  .muster-official-card,
+  .muster-card,
+  [class*="official-card"],
+  [class*="OfficialCard"] {
+    padding: 20px !important;
   }
   
-  #muster-lookup .search-container,
-  #muster-lookup .filter-container {
-    padding: 20px;
+  .muster-search-container,
+  .muster-filter-container,
+  [class*="search-container"],
+  [class*="filter-container"],
+  [class*="SearchContainer"],
+  [class*="FilterContainer"] {
+    padding: 20px !important;
   }
 }
 
-/* Accessibility improvements */
-#muster-lookup *:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Smooth scrolling for anchor links */
-#muster-lookup {
-  scroll-behavior: smooth;
+/* Accessibility */
+.muster-wrapper *:focus-visible {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
 }
