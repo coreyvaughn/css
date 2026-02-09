@@ -84,8 +84,8 @@
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   max-width: 720px;
-  margin: 0 auto;
-  padding: 80px;
+  margin: 20 auto;
+  padding: 40px;
 
   border-radius: 12px;
   box-shadow: var(--shadow-card);
