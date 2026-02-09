@@ -1,0 +1,146 @@
+/* AGGRESSIVE DARK THEME FOR MUSTER ACTION CENTER */
+
+/* Force dark on everything */
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  background-color: #1f2937 !important;
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Main wrapper */
+.muster-wrapper,
+div[class*="muster"],
+div[class*="Muster"] {
+  background: #1f2937 !important;
+  color: #f9fafb !important;
+  padding: 20px !important;
+}
+
+/* All text light colored */
+div, p, span, label, h1, h2, h3, h4, h5, h6 {
+  color: #f9fafb !important;
+}
+
+/* Input fields - dark with light text */
+input, select, textarea {
+  background-color: #4b5563 !important;
+  color: #f9fafb !important;
+  border: 2px solid #6b7280 !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: #9ca3af !important;
+  box-shadow: none !important;
+  background-color: #374151 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Yellow buttons */
+button,
+input[type="submit"],
+input[type="button"],
+.muster-button,
+[class*="button"],
+[class*="Button"],
+[class*="btn"] {
+  background: #fbbf24 !important;
+  color: #111827 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  width: 100% !important;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #f59e0b !important;
+}
+
+/* Labels */
+label {
+  display: block !important;
+  color: #e5e7eb !important;
+  margin-bottom: 4px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Form field spacing */
+.muster-input-wrapper,
+div[class*="input"] {
+  margin-bottom: 12px !important;
+}
+
+/* Cards */
+.muster-action-card,
+.muster-card,
+div[class*="card"],
+div[class*="Card"] {
+  background: #374151 !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Select dropdown styling */
+select {
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23d1d5db' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding-right: 40px !important;
+}
+
+option {
+  background-color: #4b5563 !important;
+  color: #f9fafb !important;
+}
+
+/* Textarea */
+textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+/* Links */
+a {
+  color: #60a5fa !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #93c5fd !important;
+  text-decoration: underline !important;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: auto !important;
+  height: 18px !important;
+  margin-right: 8px !important;
+}
+
+/* Remove any white backgrounds */
+div:not(input):not(button):not(select):not(textarea) {
+  background-color: transparent !important;
+}
