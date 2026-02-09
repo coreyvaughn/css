@@ -90,6 +90,10 @@
   border-radius: 12px;
   box-shadow: var(--shadow-card);
 }
+.muster-wrapper > *:first-child {
+  margin-top: 0;
+}
+
 
 /* =========================================================
    TYPOGRAPHY
