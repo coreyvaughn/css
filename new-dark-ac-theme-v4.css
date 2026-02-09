@@ -1,4 +1,21 @@
 /* =========================================================
+   Card header: "Act Now!"
+   ========================================================= */
+
+.muster-wrapper::before {
+  content: "Act Now!";
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+
+/* =========================================================
    THEME TOKENS (Light default)
    ========================================================= */
 
