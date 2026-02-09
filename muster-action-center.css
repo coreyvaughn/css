@@ -1,16 +1,28 @@
 /* Modern Card Styling for Muster Action Center Widget */
 
-/* Reset background for iframe transparency */
+/* Reset background for dark theme */
 html {
-  background-color: transparent !important;
+  background-color: #1f2937 !important;
+  background: #1f2937 !important;
 }
 
 body {
-  background-color: transparent !important;
+  background-color: #1f2937 !important;
+  background: #1f2937 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden !important;
+  color: #f9fafb !important;
+}
+
+/* Universal dark theme enforcement */
+div, section, article, main, header, footer, form {
+  color: #f9fafb !important;
+}
+
+p, span, label, h1, h2, h3, h4, h5, h6 {
+  color: inherit !important;
 }
 
 /* Main wrapper - dark theme */
