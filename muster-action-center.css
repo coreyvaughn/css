@@ -8,6 +8,9 @@ html {
 body {
   background-color: transparent !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
 }
 
 /* Main wrapper - modern clean background */
@@ -155,6 +158,18 @@ body {
   background-repeat: no-repeat !important;
   background-position: right 12px center !important;
   padding-right: 40px !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+/* Specific fix for prefix field (often a select dropdown) */
+.muster-input-wrapper select[name*="prefix"],
+.muster-input-wrapper select[id*="prefix"],
+.muster-input-wrapper .prefix-field,
+.muster-input-wrapper .muster-prefix {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Checkbox styling */
