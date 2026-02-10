@@ -1,0 +1,275 @@
+/* Modern Card Style for Muster Officials Lookup Widget */
+
+/* Container Styling */
+#muster-lookup {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Search Input Container */
+#muster-lookup .search-container,
+#muster-lookup [class*="search"] {
+  margin-bottom: 24px;
+}
+
+/* Search Input Field */
+#muster-lookup input[type="text"],
+#muster-lookup input[type="search"],
+#muster-lookup input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#muster-lookup input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Officials Cards Container */
+#muster-lookup .officials-container,
+#muster-lookup [class*="officials"],
+#muster-lookup .results-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* Individual Official Card */
+#muster-lookup .official-card,
+#muster-lookup .official,
+#muster-lookup [class*="card"] {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+#muster-lookup .official-card:hover,
+#muster-lookup .official:hover,
+#muster-lookup [class*="card"]:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+  border-color: #e5e7eb;
+}
+
+/* Official Photo/Avatar */
+#muster-lookup .official-photo,
+#muster-lookup img,
+#muster-lookup .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Official Name */
+#muster-lookup .official-name,
+#muster-lookup h3,
+#muster-lookup .name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+/* Official Title/Position */
+#muster-lookup .official-title,
+#muster-lookup .title,
+#muster-lookup .position {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Party Badge */
+#muster-lookup .party,
+#muster-lookup .political-party,
+#muster-lookup [class*="party"] {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#muster-lookup .party.democrat,
+#muster-lookup [class*="democrat"] {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+#muster-lookup .party.republican,
+#muster-lookup [class*="republican"] {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+#muster-lookup .party.independent,
+#muster-lookup [class*="independent"] {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Contact Information */
+#muster-lookup .contact-info,
+#muster-lookup .contact {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+#muster-lookup .contact-item,
+#muster-lookup .phone,
+#muster-lookup .email,
+#muster-lookup .address {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* Links and Buttons */
+#muster-lookup a,
+#muster-lookup button {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+#muster-lookup a:hover,
+#muster-lookup button:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Action Buttons */
+#muster-lookup .btn,
+#muster-lookup button[type="button"],
+#muster-lookup .action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  margin-top: 12px;
+}
+
+#muster-lookup .btn:hover,
+#muster-lookup button[type="button"]:hover,
+#muster-lookup .action-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  text-decoration: none;
+}
+
+/* Loading State */
+#muster-lookup .loading,
+#muster-lookup [class*="loading"] {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Empty State */
+#muster-lookup .empty-state,
+#muster-lookup .no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+#muster-lookup .empty-state h3,
+#muster-lookup .no-results h3 {
+  font-size: 18px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #muster-lookup .officials-container,
+  #muster-lookup [class*="officials"],
+  #muster-lookup .results-container {
+    grid-template-columns: 1fr;
+  }
+  
+  #muster-lookup {
+    padding: 16px;
+  }
+  
+  #muster-lookup .official-card,
+  #muster-lookup .official,
+  #muster-lookup [class*="card"] {
+    padding: 20px;
+  }
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#muster-lookup .official-card,
+#muster-lookup .official,
+#muster-lookup [class*="card"] {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Custom Scrollbar (for webkit browsers) */
+#muster-lookup::-webkit-scrollbar {
+  width: 8px;
+}
+
+#muster-lookup::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+#muster-lookup::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+#muster-lookup::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
