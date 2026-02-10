@@ -1,23 +1,5 @@
 /* =========================================================
-   Card header: "Act Now!"
-   ========================================================= */
-
-.muster-wrapper::before {
-  content: "Act Now!";
-  display: block;
-
-  margin-bottom: 20px;
-
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-
-  color: #ffffff;
-  text-align: center;
-}
-
-/* =========================================================
-   THEME TOKENS (Light default)
+   THEME TOKENS — LIGHT (DEFAULT)
    ========================================================= */
 
 :root {
@@ -69,31 +51,50 @@
   }
 }
 
-/* Manual override hook if exposed by widget */
-[data-theme="dark"] {
-  color-scheme: dark;
-}
-
 /* =========================================================
-   WIDGET WRAPPER
+   WRAPPER RESET & LAYOUT
    ========================================================= */
 
 .muster-wrapper {
+  box-sizing: border-box;
   background: var(--bg-card);
   color: var(--text-primary);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   max-width: 720px;
-  margin: 20 auto;
-  padding: 40px;
+  margin: 0 auto;
+  padding: 56px;
 
-  border-radius: 12px;
+  border-radius: 18px;
   box-shadow: var(--shadow-card);
 }
+
+.muster-wrapper * {
+  box-sizing: border-box;
+}
+
 .muster-wrapper > *:first-child {
   margin-top: 0;
 }
 
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.muster-wrapper::before {
+  content: "Act Now!";
+  display: block;
+
+  margin: 0 auto 24px;
+  max-width: 360px;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  color: #ffffff;
+  text-align: center;
+}
 
 /* =========================================================
    TYPOGRAPHY
@@ -102,25 +103,42 @@
 .muster-wrapper h1,
 .muster-wrapper h2,
 .muster-wrapper h3 {
-  color: var(--text-primary);
+  margin-bottom: 12px;
   font-weight: 600;
   line-height: 1.25;
-  margin-bottom: 14px;
+  color: var(--text-primary);
 }
 
 .muster-wrapper p,
 .muster-wrapper label {
-  color: var(--text-secondary);
   font-size: 15px;
   line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 /* =========================================================
-   FORM FIELDS
+   INTERNAL SPACING NORMALIZATION
+   ========================================================= */
+
+.muster-wrapper form,
+.muster-wrapper fieldset,
+.muster-wrapper .form,
+.muster-wrapper .form-row,
+.muster-wrapper .form-group {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   FORM FIELDS (COMPACT & CONSISTENT)
    ========================================================= */
 
 .muster-input-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 8px !important;
+}
+
+.muster-input-wrapper:last-child {
+  margin-bottom: 0;
 }
 
 .muster-input-wrapper label {
@@ -135,17 +153,23 @@
 .muster-input-wrapper select,
 .muster-input-wrapper textarea {
   width: 100%;
-  background: var(--bg-input);
-  color: var(--text-primary);
+  margin: 0 !important;
+
+  background-color: var(--bg-input) !important;
+  color: var(--text-primary) !important;
 
   padding: 11px 14px;
   font-size: 15px;
 
   border-radius: 10px;
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--border-default) !important;
 
   transition: background 0.2s ease, border-color 0.2s ease,
     box-shadow 0.2s ease;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .muster-input-wrapper input::placeholder,
@@ -156,14 +180,48 @@
 .muster-input-wrapper input:focus,
 .muster-input-wrapper select:focus,
 .muster-input-wrapper textarea:focus {
-  background: var(--bg-input-focus);
-  border-color: var(--border-focus);
-  box-shadow: var(--focus-ring);
+  background: var(--bg-input-focus) !important;
+  border-color: var(--border-focus) !important;
+  box-shadow: var(--focus-ring) !important;
   outline: none;
 }
 
 /* =========================================================
-   PRIMARY CTA BUTTON (ENFORCED)
+   COMPOSITE INPUTS (PREFIX + FIELD)
+   ========================================================= */
+
+.muster-wrapper .input-group,
+.muster-wrapper .field-group {
+  display: flex;
+  gap: 6px;
+}
+
+.muster-wrapper .input-group > *,
+.muster-wrapper .field-group > * {
+  margin: 0 !important;
+}
+
+/* =========================================================
+   BROWSER / WIDGET OVERRIDES (YELLOW FIXES)
+   ========================================================= */
+
+/* Autofill */
+.muster-wrapper input:-webkit-autofill,
+.muster-wrapper textarea:-webkit-autofill,
+.muster-wrapper select:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-primary);
+  box-shadow: 0 0 0px 1000px var(--bg-input) inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Focus-visible */
+.muster-wrapper *:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring) !important;
+}
+
+/* =========================================================
+   PRIMARY CTA (PURPLE — ENFORCED)
    ========================================================= */
 
 .muster-wrapper button,
@@ -174,8 +232,8 @@
   align-items: center;
   justify-content: center;
 
-  padding: 14px 22px;
   margin-top: 16px;
+  padding: 14px 22px;
 
   font-size: 15px;
   font-weight: 600;
@@ -194,7 +252,6 @@
   cursor: pointer;
 
   box-shadow: 0 8px 20px rgba(79, 70, 229, 0.45);
-
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -211,7 +268,7 @@
 }
 
 /* =========================================================
-   LINKS & HELPER TEXT
+   LINKS & HELPERS
    ========================================================= */
 
 .muster-wrapper a {
@@ -224,10 +281,34 @@
   text-decoration: underline;
 }
 
-.muster-wrapper .helper-text {
-  font-size: 13px;
-  color: var(--text-muted);
+.muster-wrapper .helper-text,
+.muster-wrapper .error,
+.muster-wrapper .error-text {
   margin-top: 4px;
+  font-size: 13px;
 }
 
-.muster-wrapper
+.muster-wrapper .error,
+.muster-wrapper .error-text {
+  color: #f87171;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .muster-wrapper {
+    padding: 40px 28px;
+    border-radius: 16px;
+  }
+
+  .muster-input-wrapper {
+    margin-bottom: 6px !important;
+  }
+
+  .muster-wrapper button,
+  .muster-wrapper input[type="submit"] {
+    width: 100%;
+  }
+}
