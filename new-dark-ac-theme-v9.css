@@ -193,6 +193,7 @@
 .muster-wrapper .input-group,
 .muster-wrapper .field-group {
   display: flex;
+  align-items: center; /* KEY FIX */
   gap: 6px;
 }
 
