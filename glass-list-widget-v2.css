@@ -1,0 +1,219 @@
+/* Modern Glass Morphism Style for Muster Campaigns Widget */
+/* Optimized for the card-based layout */
+
+/* Main widget container */
+.mstr-list-widget-v2 {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Individual campaign cards */
+.mstr-list-widget-v2 .mstr-campaign {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08),
+              0 2px 8px 0 rgba(0, 0, 0, 0.04) !important;
+  padding: 32px !important;
+  margin-bottom: 20px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+  pointer-events: none !important;
+  border-radius: 20px !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.12),
+              0 4px 16px 0 rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:hover::before {
+  opacity: 1 !important;
+}
+
+/* Campaign title/header */
+.mstr-list-widget-v2 .mstr-campaign-title,
+.mstr-list-widget-v2 .mstr-campaign h2,
+.mstr-list-widget-v2 .mstr-campaign h3 {
+  color: #1a1a1a !important;
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+  margin: 0 0 16px 0 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Campaign description */
+.mstr-list-widget-v2 .mstr-campaign-description,
+.mstr-list-widget-v2 .mstr-campaign p {
+  color: #4a4a4a !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* Campaign links */
+.mstr-list-widget-v2 .mstr-campaign a {
+  color: #0066ff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign a:hover {
+  color: #0052cc !important;
+}
+
+/* Campaign images */
+.mstr-list-widget-v2 .mstr-campaign img {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.4s ease !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:hover img {
+  transform: scale(1.02) !important;
+}
+
+/* Image containers */
+.mstr-list-widget-v2 .mstr-campaign-image,
+.mstr-list-widget-v2 .mstr-image-container {
+  margin: 20px 0 0 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+/* Buttons and CTAs */
+.mstr-list-widget-v2 .mstr-campaign button,
+.mstr-list-widget-v2 .mstr-campaign .mstr-button,
+.mstr-list-widget-v2 .mstr-cta {
+  background: rgba(0, 102, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1.5px solid rgba(0, 102, 255, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 14px 28px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #0066ff !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.1) !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign button:hover,
+.mstr-list-widget-v2 .mstr-campaign .mstr-button:hover,
+.mstr-list-widget-v2 .mstr-cta:hover {
+  background: rgba(0, 102, 255, 0.25) !important;
+  border-color: rgba(0, 102, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 102, 255, 0.2) !important;
+}
+
+/* Alternative frosted glass effect for specific background colors */
+.mstr-list-widget-v2[data-theme="light"] .mstr-campaign,
+.light-theme .mstr-list-widget-v2 .mstr-campaign {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.mstr-list-widget-v2[data-theme="dark"] .mstr-campaign,
+.dark-theme .mstr-list-widget-v2 .mstr-campaign {
+  background: rgba(30, 30, 30, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.mstr-list-widget-v2[data-theme="dark"] .mstr-campaign-title,
+.dark-theme .mstr-list-widget-v2 .mstr-campaign-title,
+.mstr-list-widget-v2[data-theme="dark"] .mstr-campaign h2,
+.dark-theme .mstr-list-widget-v2 .mstr-campaign h2,
+.mstr-list-widget-v2[data-theme="dark"] .mstr-campaign h3,
+.dark-theme .mstr-list-widget-v2 .mstr-campaign h3 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.mstr-list-widget-v2[data-theme="dark"] .mstr-campaign-description,
+.dark-theme .mstr-list-widget-v2 .mstr-campaign-description,
+.mstr-list-widget-v2[data-theme="dark"] .mstr-campaign p,
+.dark-theme .mstr-list-widget-v2 .mstr-campaign p {
+  color: #d0d0d0 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .mstr-list-widget-v2 .mstr-campaign {
+    padding: 24px !important;
+    border-radius: 16px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .mstr-list-widget-v2 .mstr-campaign-title,
+  .mstr-list-widget-v2 .mstr-campaign h2,
+  .mstr-list-widget-v2 .mstr-campaign h3 {
+    font-size: 24px !important;
+  }
+  
+  .mstr-list-widget-v2 .mstr-campaign-description,
+  .mstr-list-widget-v2 .mstr-campaign p {
+    font-size: 15px !important;
+  }
+}
+
+/* Smooth entrance animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mstr-list-widget-v2 .mstr-campaign {
+  animation: fadeInUp 0.6s ease-out !important;
+  animation-fill-mode: both !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:nth-child(1) {
+  animation-delay: 0.1s !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:nth-child(2) {
+  animation-delay: 0.2s !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:nth-child(3) {
+  animation-delay: 0.3s !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:nth-child(4) {
+  animation-delay: 0.4s !important;
+}
+
+.mstr-list-widget-v2 .mstr-campaign:nth-child(5) {
+  animation-delay: 0.5s !important;
+}
