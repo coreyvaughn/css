@@ -1,0 +1,178 @@
+/* =========================================================
+   MUSTER ACTION CENTER – DARK CARD
+   WITH PREFIX DROPDOWN ALIGNMENT FIX
+   ========================================================= */
+
+/* ---------- Card Wrapper ---------- */
+.muster-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 48px 56px;
+  background: radial-gradient(
+    circle at top,
+    #161a24 0%,
+    #0b0f14 60%
+  );
+  border-radius: 20px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+.muster-wrapper .act-now-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+
+/* ---------- Row Layout ---------- */
+.muster-wrapper .input-group,
+.muster-wrapper .field-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- Prefix Column (CRITICAL FIX) ---------- */
+/* Keep both selectors — Muster markup varies */
+.muster-wrapper .muster-input-wrapper.prefix,
+.muster-wrapper .muster-input-wrapper--prefix {
+  width: 96px;
+  min-width: 96px;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Field Spacing ---------- */
+.muster-input-wrapper {
+  margin-bottom: 12px;
+}
+
+/* ---------- Inputs + Selects ---------- */
+.muster-wrapper input,
+.muster-wrapper select,
+.muster-wrapper textarea {
+  height: 44px;
+  padding: 11px 14px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: #ffffff;
+  background: #1b2130;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-sizing: border-box;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* ---------- Prefix Select Cleanup ---------- */
+.muster-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 100%;
+  padding-right: 32px;
+
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Placeholder + Required ---------- */
+.muster-wrapper ::placeholder {
+  color: #9aa3b2;
+}
+
+.muster-wrapper .required,
+.muster-wrapper .asterisk {
+  color: #ef4444;
+}
+
+/* ---------- Focus ---------- */
+.muster-wrapper input:focus,
+.muster-wrapper select:focus,
+.muster-wrapper textarea:focus {
+  outline: none;
+  background: #20273a;
+  border-color: #7c7cff;
+  box-shadow: 0 0 0 2px rgba(124, 124, 255, 0.25);
+}
+
+/* ---------- Message Body ---------- */
+.muster-wrapper textarea {
+  height: auto;
+  min-height: 140px;
+  resize: vertical;
+  padding-top: 14px;
+}
+
+/* ---------- Channel Toggle ---------- */
+.muster-wrapper .channel-toggle {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.muster-wrapper .channel-toggle button {
+  min-width: 120px;
+  padding: 12px 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid #7c7cff;
+  background: transparent;
+  color: #c7d2fe;
+}
+
+.muster-wrapper .channel-toggle button.active {
+  background: #ffc107;
+  color: #0b0f14;
+}
+
+/* ---------- Submit Button ---------- */
+.muster-wrapper button[type="submit"] {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    #7c7cff,
+    #6a5cff
+  );
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(124, 124, 255, 0.4);
+}
+
+.muster-wrapper button[type="submit"]:hover {
+  box-shadow: 0 18px 36px rgba(124, 124, 255, 0.55);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .muster-wrapper {
+    padding: 32px 20px 40px;
+  }
+
+  .muster-wrapper .input-group,
+  .muster-wrapper .field-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .muster-wrapper .muster-input-wrapper.prefix,
+  .muster-wrapper .muster-input-wrapper--prefix {
+    width: 100%;
+    min-width: 100%;
+  }
+}
