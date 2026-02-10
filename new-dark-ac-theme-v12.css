@@ -243,6 +243,51 @@
 }
 
 /* =========================================================
+   PREFIX DROPDOWN – FINAL ALIGNMENT FIX
+   ========================================================= */
+
+/* Ensure field rows align by height, not baseline */
+.muster-wrapper .input-group,
+.muster-wrapper .field-group {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+/* Prefix wrapper (this is the missing piece) */
+.muster-wrapper .muster-input-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Normalize inputs + selects */
+.muster-wrapper input,
+.muster-wrapper select {
+  height: 44px;
+  min-height: 44px;
+  padding: 11px 14px;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+/* Select-specific corrections */
+.muster-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  display: flex;
+  align-items: center;
+
+  padding-right: 36px;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+
+  flex: 1 1 auto;
+}
+
+
+/* =========================================================
    BROWSER / WIDGET OVERRIDES (YELLOW FIXES)
    ========================================================= */
 
