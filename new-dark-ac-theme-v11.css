@@ -130,6 +130,46 @@
 }
 
 /* =========================================================
+   PREFIX / SELECT ALIGNMENT FIX
+   ========================================================= */
+
+/* Normalize inputs + selects */
+.muster-wrapper input,
+.muster-wrapper select {
+  height: 44px;
+  padding: 11px 14px;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+/* Critical select correction */
+.muster-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 36px;
+
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+}
+
+/* Ensure composite rows align correctly */
+.muster-wrapper .input-group,
+.muster-wrapper .field-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================================
    FORM FIELDS (COMPACT & CONSISTENT)
    ========================================================= */
 
