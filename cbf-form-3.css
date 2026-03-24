@@ -1,0 +1,159 @@
+/* ===== Force background on html/body ===== */
+html {
+  background-color: transparent !important;
+}
+
+body {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ===== Main Container ===== */
+.muster-wrapper {
+  background: #0076c1 !important;
+  background-color: #0076c1 !important;
+  border-radius: 16px !important;
+  padding: 28px !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+/* ===== Text ===== */
+.muster-wrapper,
+.muster-wrapper label,
+.muster-wrapper p,
+.muster-wrapper span {
+  color: #ffffff !important;
+}
+
+/* ===== Labels ===== */
+.muster-wrapper label {
+  display: block !important;
+  margin-bottom: 6px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+/* ===== Inputs ===== */
+.muster-wrapper input,
+.muster-wrapper textarea,
+.muster-wrapper select {
+  width: 100% !important;
+  padding: 12px 14px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-size: 14px !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+  box-sizing: border-box !important;
+}
+
+/* Focus state for inputs */
+.muster-wrapper input:focus,
+.muster-wrapper textarea:focus,
+.muster-wrapper select:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Placeholder visibility */
+.muster-wrapper input::placeholder,
+.muster-wrapper textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* ===== Input spacing ===== */
+.muster-input-wrapper {
+  margin-bottom: 18px !important;
+}
+
+/* ===== Select dropdown ===== */
+.muster-wrapper select {
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding-right: 36px !important;
+}
+
+/* ===== Textarea ===== */
+.muster-wrapper textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+/* ===== Button ===== */
+.muster-wrapper button,
+.muster-wrapper input[type="submit"] {
+  width: 100% !important;
+  padding: 16px !important;
+  border-radius: 10px !important;
+  border: none !important;
+  background: #d92d20 !important;
+  background-color: #d92d20 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Button hover */
+.muster-wrapper button:hover,
+.muster-wrapper input[type="submit"]:hover {
+  background: #b42318 !important;
+  background-color: #b42318 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Button active */
+.muster-wrapper button:active,
+.muster-wrapper input[type="submit"]:active {
+  transform: translateY(0) !important;
+}
+
+/* ===== Headline above form ===== */
+.muster-wrapper::before {
+  content: "Tell MD Legislators to Finish the Job of Passing a Bay-Focused Budget!" !important;
+  display: block !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+  color: #ffffff !important;
+  line-height: 1.3 !important;
+}
+
+/* ===== Checkbox styling ===== */
+.muster-wrapper input[type="checkbox"] {
+  width: auto !important;
+  height: 18px !important;
+  margin-right: 8px !important;
+  cursor: pointer !important;
+}
+
+/* ===== Links ===== */
+.muster-wrapper a {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+.muster-wrapper a:hover {
+  color: #e0e0e0 !important;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .muster-wrapper {
+    padding: 20px !important;
+    border-radius: 12px !important;
+  }
+  
+  .muster-wrapper::before {
+    font-size: 18px !important;
+  }
+}
