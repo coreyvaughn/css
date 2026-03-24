@@ -21,6 +21,18 @@ body {
   box-sizing: border-box !important;
 }
 
+/* ===== Force all divs inside wrapper to be full width and block ===== */
+.muster-wrapper * {
+  box-sizing: border-box !important;
+}
+
+.muster-wrapper > div,
+.muster-wrapper div {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 /* ===== Text ===== */
 .muster-wrapper,
 .muster-wrapper label,
@@ -36,6 +48,7 @@ body {
   font-weight: 500 !important;
   font-size: 14px !important;
   text-align: left !important;
+  width: 100% !important;
 }
 
 /* ===== Inputs ===== */
@@ -53,6 +66,7 @@ body {
   box-sizing: border-box !important;
   display: block !important;
   max-width: 100% !important;
+  margin: 0 !important;
 }
 
 /* Focus state for inputs */
@@ -70,29 +84,11 @@ body {
   opacity: 1 !important;
 }
 
-/* ===== Input spacing and alignment ===== */
+/* ===== Input spacing ===== */
 .muster-input-wrapper {
   margin-bottom: 18px !important;
   width: 100% !important;
   display: block !important;
-  box-sizing: border-box !important;
-}
-
-/* Fix any grid/flex containers */
-.muster-wrapper div[class*="row"],
-.muster-wrapper div[class*="grid"],
-.muster-wrapper div[class*="field-group"],
-.muster-wrapper div[style*="display: flex"],
-.muster-wrapper div[style*="display:flex"] {
-  display: block !important;
-  width: 100% !important;
-}
-
-/* Ensure all form field wrappers are properly sized */
-.muster-wrapper > div,
-.muster-wrapper form > div {
-  width: 100% !important;
-  box-sizing: border-box !important;
 }
 
 /* ===== Select dropdown ===== */
@@ -171,17 +167,30 @@ body {
   color: #e0e0e0 !important;
 }
 
-/* ===== Info box styling (matching container background) ===== */
-.muster-wrapper [style*="background-color: rgb(217, 45, 32)"],
-.muster-wrapper [style*="background-color:#d92d20"],
-.muster-wrapper div[class*="alert"],
-.muster-wrapper div[class*="notice"] {
+/* ===== AGGRESSIVE: Override ANY red background to blue ===== */
+.muster-wrapper div[style*="background"] {
+  background: #0076c1 !important;
+  background-color: #0076c1 !important;
+}
+
+.muster-wrapper [style*="rgb(217, 45, 32)"] {
   background: #0076c1 !important;
   background-color: #0076c1 !important;
   border-radius: 8px !important;
   padding: 16px !important;
   margin: 16px 0 !important;
   color: #ffffff !important;
+}
+
+/* Target by color value variations */
+.muster-wrapper [style*="#d92d20"],
+.muster-wrapper [style*="217, 45, 32"],
+.muster-wrapper [style*="background-color: red"],
+.muster-wrapper [style*="background-color:red"],
+.muster-wrapper [style*="background: red"],
+.muster-wrapper [style*="background:red"] {
+  background: #0076c1 !important;
+  background-color: #0076c1 !important;
 }
 
 /* ===== Responsive ===== */
