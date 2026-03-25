@@ -10,9 +10,9 @@ body {
 /* Wrapper */
 .muster-wrapper {
   background: #d1e9f6; /* white background */
-  border-radius: 12px; /* rounded corners */
+  border-radius: 10px; /* rounded corners */
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   border-color: #0076c1;
   padding: 16px; /* optional: gives breathing room inside */
 }
@@ -35,13 +35,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, sans-serif;
   color: white;
   border: 0px
-  border-radius: 8px;
+  border-radius: 10px;
   background: #ed1c24;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .muster-wrapper input[type='submit']:hover {
-  background: #ed1c24; /* slightly darker yellow */
+  background: #b5425a; /* slightly darker yellow */
   transform: translateY(-1px);
   cursor: pointer;
   box-shadow: 0 0 12px rgba(237, 28, 36, 0.6); /* subtle glow */
