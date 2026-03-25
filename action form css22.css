@@ -35,7 +35,6 @@ body {
   border: 0px
   border-radius: 10px;
   background: #ed1c24;
-  width: 100%;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -104,4 +103,15 @@ body {
 /* Hide label span in personal message */
 .muster-personal-message div label span {
   display: none;
+}
+/* Force full-width CTA button */
+.muster-wrapper button {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* If the button is wrapped, ensure wrapper also spans full width */
+.muster-wrapper .muster-input-wrapper:last-child {
+  width: 100%;
 }
