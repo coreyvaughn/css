@@ -11,11 +11,11 @@ body {
 /* Wrapper */
 .muster-wrapper {
   background: #d1e9f6; /* white background */
-  border-radius: 10px; /* rounded corners */
+  border-radius: 8px; /* rounded corners */
   border-style: solid;
-  border-width: 0px;
-  border-color: #0076c1;
-  padding: 16px; /* optional: gives breathing room inside */
+  border-width: 4px;
+  border-color: #003f70;
+  padding: 40px; /* optional: gives breathing room inside */
 }
 
 /* ===== Headline ===== */
