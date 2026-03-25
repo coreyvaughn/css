@@ -1,5 +1,5 @@
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, sans-serif;
 }
 
 body {
@@ -23,6 +23,7 @@ body {
   margin-bottom: 24px;
   color: #ffffff;
   line-height: 1.3;
+  text-align: center;
 
 /* Submit button */
 .muster-wrapper input[type='submit'] {
@@ -38,7 +39,7 @@ body {
   background: #ed1c24; /* slightly darker yellow */
   transform: translateY(-1px);
   cursor: pointer;
-  box-shadow: 0 0 12px rgba(252, 185, 0, 0.6); /* subtle glow */
+  box-shadow: 0 0 12px rgba(237, 28, 36, 0.6); /* subtle glow */
 }
 
 .muster-wrapper .muster-act-btn-secondary {
@@ -75,7 +76,7 @@ body {
 
 .muster-input-wrapper select,
 .muster-input-wrapper option {
-  color: #525151 !important;
+  color: #ffffff !important;
 }
 
 .muster-input-wrapper textarea {
