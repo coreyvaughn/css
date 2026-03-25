@@ -1,0 +1,119 @@
+/* ===== Main Container ===== */
+.muster-wrapper {
+  background: #0076c1;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ===== Headline ===== */
+.muster-wrapper::before {
+  content: "Tell MD Legislators to Finish the Job of Passing a Bay-Focused Budget!";
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* ===== Text ===== */
+.muster-wrapper,
+.muster-wrapper label,
+.muster-wrapper p,
+.muster-wrapper span {
+  color: #ffffff;
+}
+
+/* ===== Grid Layout for Inputs ===== */
+.muster-wrapper form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+/* Full width elements (message, subject, button, etc.) */
+.muster-wrapper textarea,
+.muster-wrapper .full-width,
+.muster-wrapper button {
+  grid-column: span 2;
+}
+
+/* ===== Input Wrappers ===== */
+.muster-input-wrapper {
+  margin-bottom: 0;
+}
+
+/* ===== Inputs ===== */
+.muster-wrapper input,
+.muster-wrapper textarea,
+.muster-wrapper select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Placeholder visibility fix */
+.muster-wrapper input::placeholder,
+.muster-wrapper textarea::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+/* Focus state */
+.muster-wrapper input:focus,
+.muster-wrapper textarea:focus,
+.muster-wrapper select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35);
+}
+
+/* Labels */
+.muster-wrapper label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ===== CTA Button ===== */
+.muster-wrapper button {
+  margin-top: 10px;
+  padding: 18px;
+  border-radius: 12px;
+  border: none;
+  background: #d92d20;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.muster-wrapper button:hover {
+  background: #b42318;
+  transform: translateY(-1px);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 640px) {
+  .muster-wrapper {
+    padding: 20px;
+  }
+
+  .muster-wrapper form {
+    grid-template-columns: 1fr;
+  }
+
+  .muster-wrapper textarea,
+  .muster-wrapper button {
+    grid-column: span 1;
+  }
+}
