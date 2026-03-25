@@ -9,19 +9,22 @@ body {
 
 /* Wrapper */
 .muster-wrapper {
-  background: #0076c1; /* white background */
+  background: #d1e9f6; /* white background */
   border-radius: 12px; /* rounded corners */
+  border-style: solid;
+  border-color: #0076c1;
   padding: 16px; /* optional: gives breathing room inside */
 }
 
 /* ===== Headline ===== */
 .muster-wrapper::before {
   content: "Tell MD Legislators to Finish the Job of Passing a Bay-Focused Budget!";
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, sans-serif;
   display: block;
   font-size: 36px;
   font-weight: 800;
   margin-bottom: 24px;
-  color: #ffffff;
+  color: #0076c1;
   line-height: 1.3;
   text-align: center;
 
