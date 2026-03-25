@@ -12,7 +12,7 @@ body {
   background: #d1e9f6; /* white background */
   border-radius: 12px; /* rounded corners */
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #0076c1;
   padding: 16px; /* optional: gives breathing room inside */
 }
@@ -32,6 +32,7 @@ body {
 /* Submit button */
 .muster-wrapper input[type='submit'] {
   font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, sans-serif;
   color: white;
   border: 0px
   border-radius: 8px;
@@ -67,7 +68,7 @@ body {
 .muster-input-wrapper option {
   font-size: 12px;
   color: #525151;
-  font-family: inherit !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, sans-serif; !important;
 }
 
 .muster-input-wrapper input,
@@ -94,6 +95,7 @@ body {
 
 .muster-input-wrapper label span {
   font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Lato", Roboto, sans-serif;
 }
 
 .muster-input-wrapper input[type='checkbox'] {
